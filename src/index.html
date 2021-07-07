@@ -5,10 +5,33 @@
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body >
+    <header><div class="Banco">BancoAnny</div></header>
+    <main>
+     
+     <div class="cajadetextoprincipal" id="bienvenida">
+        <p id="texto1">Descubre si tu tarjeta de crédito es elegible para nuestras promociones exclusivas</p></div>
+        
+         <div id="form"><form>
+          <p><label id="instruccion">Ingresa tus datos a continuación</label></p>
+          <p><input type="text" id="nombre" placeholder="Introduce tu nombre"></p>
+          <p><input type="email" id="correo" placeholder="Introduce tu correo"></p>
+          <p><input type="text" maxlength="16"  id="cardNumber" placeholder="Introduce tu tarjeta de Crédito" required></p>
+          <p><input type="button" value="Enviar" id="validationButton"></p>
+          </form></div>
+    
+          <div><img id="imagenprincipal" src="cheque-guarantee-card-2103509.svg"></div>
+      
+      
+    
+      <div id="muestra"><p id="respuesta"></p></div>
+      <div><p id="numeroEnmascarado"></p></div>
+     
+    </main>
+    <footer class="piedepágina" id= "redessociales">
+      <div class="redes">BancoAnny</div>
+     </footer>
     <script src="index.js" type="module"></script>
-  </body>
+    
+    </body>
 </html>
