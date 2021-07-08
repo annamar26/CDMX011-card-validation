@@ -4,7 +4,7 @@ Mi proyecto simula una página de promociones de un banco donde el usuario tiene
 
 # Imagen final del proyecto
 
-<img scr="imagenProyectoFinal.png">
+![Proyecto Final](img imagenProyectoFinal.png)
 
 # Investigacion UX
 
@@ -12,9 +12,9 @@ Mis usuarios objetivo son usuarios de tarejta de credito que busquen promociones
 Es un producto simple que le permite al usuaior saber si su tarjeta es elegible para dichas promociones.
 
 # Prototipo baja fidelidad
-<img scr="Prototipo1.jpg">
+![Prototipo papel](Prototipo1.jpg)
 
 En elfeedback que recibí me indicaron que dejara muy claro que datos se ingresaban en cada campo.
 
-<img scr="PrototipoFinal.png">
+![Prototipo Final](PrototipoFinal.png)
 
