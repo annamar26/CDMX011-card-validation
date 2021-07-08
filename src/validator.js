@@ -89,6 +89,7 @@ const validator = {
     }
     console.log(arreglo1);
 
+  
 
   let arrTd = arreglo1;
   let firstNumberTodouble = [arrTd[1]];
@@ -100,7 +101,8 @@ const validator = {
   let seventhNumberTodouble = [arrTd[13]];
   let eigthNumberTodouble= [arrTd[15]];
   let numbersToDouble= [firstNumberTodouble,secondsNumberTodouble,thirdNumberTodouble,fourthNumberTodouble, fifthNumberTodouble,sixthNumberTodouble,seventhNumberTodouble, eigthNumberTodouble];
-  //console.log(numbersToDouble);
+  //console.log(numbersToDouble);*/
+
 
   let numbersToDouble1 = numbersToDouble.map(normalize);
   //console.log(numbersToDouble1)
@@ -115,7 +117,7 @@ const validator = {
   let firstNumber = [arrN[0]];
   let secondsNumber = [arrN[2]];
   let thirdNumber = [arrN[4]];
-    let fourthNumber = [arrN[6]];
+  let fourthNumber = [arrN[6]];
   let fifthNumber = [arrN[8]];
   let sixthNumber = [arrN[10]];
   let seventhNumber = [arrN[12]];
@@ -150,9 +152,31 @@ console.log(total);
   } else {
   return false
   
-  }},
-
   }
+},
+
+
+  getIssuer(creditCardNumber){
+   
+  let emisora;
+  let lengthCreditCardNumber= creditCardNumber.length
+  let firstChart= creditCardNumber.charAt(0);
+  if (firstChart==="4" & lengthCreditCardNumber===16){
+    emisora= "Visa";
+  }
+  if (firstChart==="5" & lengthCreditCardNumber===16){
+      emisora= "MasterCard"  
+  }
+  if (firstChart==="3" & lengthCreditCardNumber===15){
+      emisora="American Express"  ;
+  }
+     
+     return emisora ;  
+ }
+ 
+};
+
+  
 
 export default  validator;
 

@@ -7,7 +7,7 @@
 
 
 body{
-   background-image: url(top-view-of-lilac-flowers-isolated-on-pink-color-background-with-copy-space.jpg);
+    background-color: rgba(255, 211, 235, 0.438);;
     background-size:cover;
     background-blend-mode:screen;
     background-position: top;
@@ -78,11 +78,11 @@ body{
 
 #imagenprincipal{
     position:absolute;
-    top: 180px;
-    left: 760px;
+    top: 150px;
+    left: 727px;
     display: block;
-    height: 500px ;
-    width: 800px;
+    height: 550px ;
+    width: 850px;
     justify-content:right;  
     align-items:center;
     background-size: initial;
@@ -90,8 +90,29 @@ body{
     
 }
 
-
-
+ #mastercard{
+    position:absolute;
+    top: 480px;
+     left: 1220px;
+     display: block;
+     height: 70px ;
+     width: 120px;
+     justify-content:center;  
+     align-items:center;
+     background-size: initial;
+  
+}
+#visa{
+    position:absolute;
+    top: 470px;
+     left: 1220px;
+     display: block;
+     height: 70px ;
+     width: 120px;
+     justify-content:center;  
+     align-items:center;
+     background-size: initial;
+}
 #form{
     position:relative;
     display:flex;
@@ -190,7 +211,7 @@ main{
     height: 200px ;
     width: 400px;
     right: 300px;
-    top: 450px;
+    top: 430px;
 }
 
 #bloquecentral{
