@@ -4,7 +4,7 @@ Mi proyecto simula una página de promociones de un banco donde el usuario tiene
 
 # Imagen final del proyecto
 
-![Proyecto Final](img imagenProyectoFinal.png)
+![Proyecto Final](ImagenProyectoFinal.png)
 
 # Investigacion UX
 
