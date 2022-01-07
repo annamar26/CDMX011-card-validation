@@ -3,7 +3,7 @@ const submitButton= document.querySelector('#validate')
 const masked= document.querySelector('#masked')
 const cardNumber= document.querySelector('#cardNumber')
 const client= document.querySelector('#name')
-const name= document.querySelector('.card-name')
+const name= document.querySelector('#client')
 const helper= document.querySelector('.helper')
 
 
@@ -21,7 +21,7 @@ const addSpaces = (string, caracter, steps) => {
 }
 submitButton.addEventListener('click', ()=>{
    helper.innerHTML=''
-  console.log(cardNumber.value.length)
+
   if(cardNumber.value.length<16 & cardNumber.value.length>0){
     helper.innerHTML= 'La tarjeta debe tener al menos 16 dígitos'
   }else if(cardNumber.value.length===0){
@@ -29,7 +29,7 @@ submitButton.addEventListener('click', ()=>{
   }else{
    
     masked.innerHTML= addSpaces(validator.maskify(cardNumber.value), ' ', 4)
-name.innerHTML=client.value
+name.innerHTML=client.value.toUpperCase()
   }
 
 

@@ -5,7 +5,7 @@
 --secondary-color: #F7F6F8;
 --font-color: #A0A0A0;
 --icon-color: #3AC990;
---card-color: #8169BA;
+--card-color: #907ac2;
 --border-color: #725BA4;
 }
 *{
@@ -36,6 +36,7 @@ h1{
     text-align: left;
     font-size: 9vh;
     margin-bottom: 5vh;
+    color: var(--main-color);
 }
 form{
     display: flex;
@@ -91,20 +92,61 @@ label{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .card-header{
-    justify-content: flex-start;
-  font-size: 5.5vh;
-    color: var(--font-color);
-    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 5.5vh;
+
     width: 100%;
+    color: var(--secondary-color);
+    height: 8vh;
+    margin-bottom: 8vh;
   
 }
-.masked, .client{
-    font-size: 4vh;
+.card-name{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1.5vh;
+  
+
+}
+.bank{
+    color: var(--secondary-color);
+    width: 60%;
+}
+.masked{
+    font-size: 4.8vh;
     width: 100%;
     text-align: center;
     font-family: 'JetBrains Mono', monospace;
+    align-items: center;
+    color: var(--secondary-color);
+}
+.client-name{
+    width: 80%;
+   display: flex;
+    font-size: 3.5vh;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 4vh;
+    color: var(--secondary-color);
+}
+.date{
+    width: 20%;
+    text-align: right;
+    height: 100%;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 4vh;
+    color: var(--secondary-color);
 }
 .submit{
     width: 15vw;
@@ -116,4 +158,11 @@ label{
 .submit:hover{
     background-color: var(--card-color);
     color: var(--secondary-color);
+}
+.helper{
+color: var(--card-color);
+font-size: 2.5vh;
+}
+img{
+    width: 7vw;
 }
