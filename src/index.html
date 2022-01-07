@@ -6,35 +6,34 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body >
-    <header><div class="Banco">BancoAnny</div></header>
-    <main>
-     
-     <div class="cajadetextoprincipal" id="bienvenida">
-        <p id="texto1">Descubre si tu tarjeta de crédito es elegible para nuestras promociones exclusivas</p></div>
-        
-         <div id="form"><form>
-          <p><label id="instruccion">Ingresa tus datos a continuación</label></p>
-          <p><input type="text" id="nombre" placeholder="Introduce tu nombre"></p>
-          <p><input type="email" id="correo" placeholder="Introduce tu correo"></p>
-          <p><input type="text" maxlength="16"  id="cardNumber" placeholder="Introduce tu tarjeta de Crédito" required></p>
-          <p><input type="button" value="Enviar" id="validationButton"></p>
-          </form></div>
-    
-          <div><img id="imagenprincipal" src="cheque-guarantee-card-2103509.svg"></div>
-      
-      
-    
-      <div id="muestra"><p id="respuesta"></p></div>
-      <div><p id="numeroEnmascarado"></p></div>
-     <div id="emisora">
-  
-      </div>
-     
-    </main>
-    <footer class="piedepágina" id= "redessociales">
-      <div class="redes">BancoAnny</div>
-     </footer>
-    <script src="index.js" type="module"></script>
-    
+      <header></header>
+      <main>
+        <section class="data">
+          <form >
+            <h1>VALIDATE CARD</h1>
+            <label for="cardNumber">CARD NUMBER</label>
+            <input id='cardNumber' type="text" maxlength="16" required>
+            <p class="helper"></p>
+            <label for="cardNumber">NAME ON CARD</label>
+            <input id='name' type="text">
+            <input id='validate' class='submit' type="button" value="VALIDATE">
+          </form>
+        </section>
+        <section class="credit-card">
+          <div class="card">
+            <section class="card-header">
+              <p class='bank'>LAB[CARD]</p>
+              <img src="visa-logo.png" alt="visa">
+            </section>
+            <section class="masked" id='masked'>XXXX XXXX XXXX XXXX</section>
+            <section class="card-name">
+              <p class='client-name' id='client'>CLIENT NAME</p>
+              <p  class='client date'>00/00</p>
+            </section>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+      <script src="index.js" type="module"></script>
     </body>
 </html>

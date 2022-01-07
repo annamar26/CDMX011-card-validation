@@ -1,48 +1,36 @@
 import validator from './validator.js';
+const submitButton= document.querySelector('#validate')
+const masked= document.querySelector('#masked')
+const cardNumber= document.querySelector('#cardNumber')
+const client= document.querySelector('#name')
+const name= document.querySelector('#client')
+const helper= document.querySelector('.helper')
 
 
-document.getElementById("validationButton").addEventListener("click", function(){ 
-    validarCampoVacio();
-      });
-
-document.getElementById("validationButton").addEventListener("keydown", function(e){ 
-     if(e.key ===13){
-      validarCampoVacio()
-      }});
-
-function recuperarValor(){
- let creditCardNumber = document.getElementById("cardNumber").value; 
-  return creditCardNumber
-  
- }
-     
-function validarCampoVacio(){
-   if(recuperarValor().length!=0){
-
-    document.getElementById("numeroEnmascarado").innerHTML= validator.maskify(recuperarValor());
-        if (validator.isValid (recuperarValor())==true){
-        document.getElementById("respuesta").innerHTML= "Su tarjeta es valida y es elegible para nuestras promociones";
-        insertarImagen()
-        location.reload
-        }else{
-        document.getElementById("respuesta").innerHTML= "Su tarjeta NO es Valida, ingrese los datos correctamente";
-        
-        }}
-    else{
-       location.reload();
-       alert("Ingresa el numero de tu tarjeta de crédito");
-    }
-  
+const addSpaces = (string, caracter, steps) => {
+  let formatNumber = "";
+  const stringLength = string.length;
+  for (let i = 0; i < stringLength; i += steps) {
+      if (i + steps < stringLength) {
+          formatNumber += string.substring(i, i + steps) + caracter;
+      } else {
+          formatNumber += string.substring(i, stringLength);
+      }
+  }
+  return formatNumber;
 }
+submitButton.addEventListener('click', ()=>{
+   helper.innerHTML=''
 
-function insertarImagen(){
-    if (validator.getIssuer(recuperarValor())==="Visa"){
-        document.getElementById("emisora").innerHTML= '<img id="visa" src="visa.svg" >';
-      }
-      if (validator.getIssuer(recuperarValor())==="MasterCard"){
-        document.getElementById("emisora").innerHTML= '<img id="mastercard" src="master.svg" >';
-      }
-      if (validator.getIssuer(recuperarValor())==="American Express"){
-        document.getElementById("emisora").innerHTML= '<img scr="american.svg">';
-      }
-    }
+  if(cardNumber.value.length<16 & cardNumber.value.length>0){
+    helper.innerHTML= 'La tarjeta debe tener al menos 16 dígitos'
+  }else if(cardNumber.value.length===0){
+    helper.innerHTML='Este campo no puede estar vacío'
+  }else{
+   
+    masked.innerHTML= addSpaces(validator.maskify(cardNumber.value), ' ', 4)
+name.innerHTML=client.value.toUpperCase()
+  }
+
+
+})
