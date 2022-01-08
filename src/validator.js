@@ -11,9 +11,10 @@ const validator = {
 
   isValid(cardNumber) {
     const array = [];
-    for (let i = 0; i < cardNumber.length; i++) {
+    const inverse = cardNumber.split('').reverse()
+    for (let i = 0; i < inverse.length; i++) {
       if (i % 2 !== 0) {
-        const double = cardNumber[i] * 2;
+        const double = inverse[i] * 2;
 
         if (double.toString().length == 2) {
           const digits = double.toString().split("");
@@ -27,7 +28,7 @@ const validator = {
           array.push(double);
         }
       } else {
-        array.push(parseInt(cardNumber[i]));
+        array.push(parseInt(inverse[i]));
       }
     }
     const result = array.reduce(

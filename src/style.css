@@ -1,168 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&family=Tangerine:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
-:root{
-    --main-color:  #7760AE;
---secondary-color: #F7F6F8;
---font-color: #A0A0A0;
---icon-color: #3AC990;
---card-color: #907ac2;
---border-color: #725BA4;
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@700&family=Tangerine:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap");
+:root {
+  --main-color: #7760ae;
+  --secondary-color: #f7f6f8;
+  --font-color: #a0a0a0;
+  --icon-color: #3ac990;
+  --card-color: #907ac2;
+  --border-color: #725ba4;
 }
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Sen', sans-serif;
-    color:var(--font-color)
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sen", sans-serif;
+  color: var(--font-color);
 }
-main{
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+.data {
+  background-color: var(--secondary-color);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  width: 100%;
+  text-align: left;
+  font-size: 9vh;
+  margin-bottom: 5vh;
+  color: var(--main-color);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+}
+#name,
+#cardNumber {
+  width: 100%;
+  margin-bottom: 1vh;
+  border: 0;
+  border-bottom: 2px solid var(--border-color);
+  background-color: var(--secondary-color);
+  line-height: 7vh;
+  font-size: 4vh;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--border-color);
+}
+input:focus {
+  outline: none;
+}
+label {
+  text-align: left;
+  width: 100%;
+  margin-top: 2vh;
+}
+.credit-card {
+  background-color: var(--main-color);
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  margin-top: 25vh;
+  width: 33vw;
+  height: 28vh;
+  background-color: var(--card-color);
+  border-radius: 15px;
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: 6px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 5.5vh;
+  width: 100%;
+  color: var(--secondary-color);
+  height: 7vh;
+  margin-bottom: 4vh;
+  position: relative;
+}
+.card-name {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.5vh;
+}
+.bank {
+  color: var(--secondary-color);
+  width: 60%;
+}
+.masked {
+  font-size: 4vh;
+  width: 100%;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  align-items: center;
+  color: var(--secondary-color);
+  position: relative;
+  margin-bottom: 4vh;
+}
+.client-name {
+  width: 80%;
+  display: flex;
+  font-size: 3.5vh;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 4vh;
+  color: var(--secondary-color);
+}
+.date {
+  width: 20%;
+  text-align: right;
+  height: 100%;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 4vh;
+  color: var(--secondary-color);
+}
+.submit {
+  width: 17vw;
+  height: 9vh;
+  border: 3px solid var(--border-color);
+  margin-top: 7vh;
+  color: var(--border-color);
+  font-size: 4vh;
+}
+.submit:hover {
+  background-color: var(--card-color);
+  color: var(--secondary-color);
+}
+.helper {
+  color: var(--card-color);
+  font-size: 2.5vh;
+}
+img {
+  width: 7vw;
+}
+.valid-icon {
+  width: 3vw;
+}
+.validation {
+  display: flex;
+  width: 38vw;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  top: 73vh;
+  position: fixed;
+}
+.isValid {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 4vh;
+  font-weight: normal;
+  text-align: center;
+}
+.validate-icon-container {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 200px) and (orientation: portrait)  { 
+  main {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height:100vh;
-    
-    
-}
-.data{
-    background-color: var(--secondary-color);
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-h1{
-    width: 100%;
-    text-align: left;
-    font-size: 9vh;
-    margin-bottom: 5vh;
-    color: var(--main-color);
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 90%;
-}
-#name, #cardNumber{
-    width: 100%;
-   margin-bottom: 1vh;
-   border: 0;
- border-bottom: 2px solid var(--border-color);
- background-color: var(--secondary-color);
- line-height: 7vh;
- font-size: 4.8vh;
- font-family: 'JetBrains Mono', monospace;
- color: var(--border-color);
+    flex-direction: column-reverse;
+    overflow-y: hidden;
+  }
+  .data, .credit-card{
+      width: 100%;
+      height: 55%;
+  }
+  .credit-card{
+      height: 46%;
+  }
 
-}
-input:focus{
-    outline: none;
-}
-label{
-    text-align: left;
-    width: 100%;  
-    margin-top: 2vh;
-   
-}
-.credit-card{
-    background-color: var(--main-color);
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    
-
-}
-.card{
-    width: 38vw;
-    height: 30vh;
-    background-color: var(--card-color);
-    border-radius: 15px;
-    border-color: var(--border-color);
-    border-style: solid;
-    border-width: 6px;
-    padding-top: 10%;;
-    padding-bottom: 10%;
-    padding-right: 5%;
-    padding-left: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.card-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 5.5vh;
-
-    width: 100%;
-    color: var(--secondary-color);
-    height: 8vh;
-    margin-bottom: 8vh;
-  
-}
-.card-name{
-    display: flex;
-    flex-direction: row;
-    align-items: space-between;
-    width: 100%;
-    justify-content: center;
-    margin-top: 1.5vh;
-  
-
-}
-.bank{
-    color: var(--secondary-color);
-    width: 60%;
-}
-.masked{
-    font-size: 4.8vh;
-    width: 100%;
-    text-align: center;
-    font-family: 'JetBrains Mono', monospace;
-    align-items: center;
-    color: var(--secondary-color);
-}
-.client-name{
-    width: 80%;
-   display: flex;
-    font-size: 3.5vh;
-    height: 100%;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'JetBrains Mono', monospace;
-    line-height: 4vh;
-    color: var(--secondary-color);
-}
-.date{
-    width: 20%;
-    text-align: right;
-    height: 100%;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 4vh;
-    color: var(--secondary-color);
-}
-.submit{
-    width: 15vw;
-    height: 8vh;
-    border: 3px solid var(--border-color);
+  .card {
     margin-top: 3vh;
-    color: var(--border-color)
-}
-.submit:hover{
-    background-color: var(--card-color);
-    color: var(--secondary-color);
-}
-.helper{
-color: var(--card-color);
-font-size: 2.5vh;
-}
-img{
-    width: 7vw;
+width: 80%; }
+.card-header {
+    
+    font-size: 3.8vh;
+       height: 5vh;
+    margin-bottom: 2.5vh;
+    
+  }
+ 
+    .masked {
+        margin-top: 5vh;
+    font-size: 3.8vh;
+    margin-bottom: 2vh;
+   
+  }
+  .client-name {
+
+    font-size: 3vh;
+   
+  }
+  .date {
+  
+    font-size: 3vh;
+  
+  }
+  img {
+    width: 15vw;
+  }
+  h1{
+      font-size: 5vh;
+      margin-bottom: 3vh;
+ 
+  }
+  .submit{
+      margin-top: 3vh;
+      width: 50vw;
+  }
+  .validation{
+      top:40vh;
+      width:80%
+  }
+  .isValid{
+      font-size: 3vh;
+  }
+  .valid-icon{
+      width: 70%;
+  }
 }
