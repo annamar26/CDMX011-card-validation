@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    
-  </head>
-  <body >
-      <header></header>
-      <main>
+
+</head>
+
+<body>
+    <header></header>
+    <main>
         <section class="data">
-          <form >
-            <h1>VALIDATE CARD</h1>
-            <label for="cardNumber">CARD NUMBER</label>
-            <input id="cardNumber" type="text" maxlength="16" required>
-            <p class="helper"></p>
-            <label for="cardNumber">NAME ON CARD</label>
-            <input id="name" type="text">
-            <input id="validate" class="submit" type="button" value="VALIDATE">
-          </form>
+            <form>
+                <h1>VALIDATE CARD</h1>
+                <label for="cardNumber">CARD NUMBER</label>
+                <input id="cardNumber" type="text" maxlength="16" required>
+                <p class="helper"></p>
+                <label for="cardNumber">NAME ON CARD</label>
+                <input id="name" type="text">
+                <input id="validate" class="submit" type="button" value="VALIDATE">
+            </form>
         </section>
         <section class="credit-card">
             <div class="card">
                 <section class="card-header">
                     <p class="bank">LAB[CARD]</p>
 
+
                     <img src="logo.png" class='logo-bank' alt="bank"></section>
+
+                   
 
 
                 <section class="masked" id="masked">XXXX XXXX XXXX XXXX</section>
@@ -39,19 +44,10 @@
                 <p class="isValid"></p>
                 <section class="validate-icon-container"></section>
             </section>
-            <section class="masked" id="masked">XXXX XXXX XXXX XXXX</section>
-            <section class="card-name">
-              <p class="client-name" id="client">CLIENT NAME</p>
-              <p  class="client date">00/00</p>
-            </section>
-          </div>
-          <section class="validation">
-            <p class="isValid"></p>
-           <section class="validate-icon-container"></section>
-          </section>
         </section>
-      </main>
-      <footer></footer>
-      <script src="index.js" type="module"></script>
-    </body>
+    </main>
+    <footer></footer>
+    <script src="index.js" type="module"></script>
+</body>
+
 </html>
