@@ -166,7 +166,7 @@ img {
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  top: 73vh;
+  top: 75vh;
   position: fixed;
 }
 .isValid {
@@ -218,12 +218,12 @@ width: 80%; }
   }
   .client-name {
 
-    font-size: 3vh;
+    font-size: 2.8vh;
    
   }
   .date {
   
-    font-size: 3vh;
+    font-size: 2.8vh;
   
   }
   img {
@@ -231,7 +231,7 @@ width: 80%; }
   }
   h1{
       font-size: 5vh;
-      margin-bottom: 3vh;
+      margin-bottom: 2.5vh;
  
   }
   .submit{
@@ -248,4 +248,29 @@ width: 80%; }
   .valid-icon{
       width: 70%;
   }
+}
+@media screen and (min-width: 370px) and (orientation: portrait) {
+    .masked{
+        margin-top: 3.6vh;
+        font-size: 3.2vh;
+    }
+    .card-header{
+        margin-top: 1.5vh;
+    }
+    #name, #cardNumber{
+        font-size: 3.2vh;
+    }
+    .isValid{
+        font-size: 2.5vh;
+    }
+
+    .card{
+        width: 60%;
+    }
+    .validation{
+        width: 50%;
+    }
+    label{
+        font-size: 3vh;
+    }
 }
