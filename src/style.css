@@ -196,6 +196,7 @@ img {
       height: 55%;
   }
   .credit-card{
+ 
       height: 46%;
   }
 
@@ -265,7 +266,7 @@ width: 80%; }
     }
 
     .card{
-        width: 60%;
+        width: 80%;
     }
     .validation{
         width: 50%;
